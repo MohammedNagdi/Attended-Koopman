@@ -10,10 +10,6 @@ Newly Introduced Methods
 2. ### Dynamic Reencoding:
     Inspired by periodic reencoding, which ensures that latent space predictions remain within the Koopman invariant subspace and handles challenges like switching dynamics and multiple fixed points, Dynamic Reencoding automates this process. It does so by comparing the reencoding difference of the current point against the average difference over a previous window of predicted points, allowing the model to determine when reencoding is necessary.
 
-3. ### Architectural Variation:
-
-    Inspired by the Kolmogorov-Arnold representation theorem, Kolmogorov-Arnold Networks (KANs) have been proposed as a promising alternative to Multi-Layer Perceptrons (MLPs). While MLps have *fixed* activation functions on *nodes* ("neurons"), KANs have *learnable* activation functions on *edges* ("weights"). KANs have no linear weights at all -- every weight parameter is replaced by a univariate function parameterized as a spline. Here, we bring together these two worlds by  adding the ability to use either MLP or KANs as the backbone for the Koopman autoencoder. 
-
 
 ## Project Structure
 
@@ -25,7 +21,6 @@ biokoopman/
 ├── KoopmanTrainer_AFT_DR.py    # AFT trainer with Dynamic Reencoding
 ├── KoopmanAE_optimization.py   # Koopman autoencoder optimization routines
 ├── run_experiment.py           # Main experiment runner script
-├── Project.md                  # Project description and objectives
 ├── requirement.txt             # Python dependencies
 ├── data/                       # Generated datasets directory
 ├── experiments/                # Experimental results and outputs
