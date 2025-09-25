@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+# Ignore everything in data/
+#data/*
+
+# But don't ignore the folder itself
+!data/
+
+# Keep a placeholder file
+!data/.gitkeep
+
+# MacOS
+*.DS_Store
+
+# VSCode
+.vscode
